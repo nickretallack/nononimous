@@ -1,0 +1,133 @@
+body {font-family:'helvetica';}
+.cols {overflow:hidden; clear:both;}
+.half {width:50%;float:left;}
+.third {width:33.3%;float:left;}
+
+h1,h2,h3,h4,h5,h6 { text-align:center ;}
+
+h3 {margin:0;}
+
+img {margin:0;}
+
+form { text-align:center;}
+input[type=submit] {display:block; margin:auto;}
+textarea {width:98%; margin:auto; display:block;}
+
+.imgbox { width:250px; height:250px; background:no-repeat center #ddd; float:left; margin-right:20px; }
+
+
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a,a.visited {color:#3255ed;}
+
+.flickr {float:left; margin:2px;}
+.text {margin:5px; padding:5px 10px; background:center left no-repeat #cbcbfb; -moz-border-radius:10px; max-height:140px; overflow:hidden;}
+.writing .text {padding-left:160px;}
+.thing {text-align:center;}
+
+a.text, .tinytext a {display:block; text-decoration:none; color:#365c88;}
+
+#masthead input { font-size:1em; display:inline }
+#masthead input[type=text] { 
+  background-image: url(/static/images/openid.png);
+  background-repeat: no-repeat; 
+  background-position: 6px 50%;
+  padding: 1px 0 1px 26px;
+  margin:0;
+  width:38ex; text-align:center }
+#masthead p { display:inline }
+#masthead input[type=submit] { margin: 0 }
+#masthead {text-align:center;}
+
+
+
+.captionbox { overflow:hidden }
+.captionbox li { width:150px; height:150px; margin:5px; float:left; position:relative; margin-bottom:1em;border:solid #ccc; border-width:2px 2px 0 2px; }
+.captionbox li a { display:block; text-align:center; width:100%; position:absolute; bottom:-1em; left:-2px; background-color:#ddd; border:solid #ccc;
+  border-width:0 2px 2px 2px;}
+
+h1 {font-size:2.5em; letter-spacing:.1ex;}
+h2 {font-size:2em; letter-spacing:.1ex; margin:5px 0;}
+.section h3 {font-size:2em;color:white; text-align:left; padding-left:20px; letter-spacing:.1em;}
+h2, h3, h1 {color:white;  font-weight:bold; }
+.section h3 a { color:white;}
+
+.section {
+  padding:3px 1px 4px;
+  margin:3px;
+  -moz-border-radius: 13px;
+}
+
+.selfdesc { padding:10px;}
+
+.poster, .parent, .receiver {background-color:#a7f1bb; float:left; height:205px;}
+.parent, .receiver {float:right;}
+.poster h3, .parent h3, .receiver h3, .ratings h3 {padding:0; text-align:center;}
+.pictures, .file {background-color:#f19484;}
+.writing, .write {background-color:#a7c7f1;}
+.users, h2, h1 {background-color:#a7f1bb;}
+.features {background-color:#faffb9; font-size:1.2em; padding:10px;}
+.features li {padding:3px;  margin-left:20px;}
+.score {font-size:2em; color:red;}
+.ratings {background-color:#f19484; width:500px; margin:auto;}
+
+.clear { clear:both;}
+.center h3 {text-align:center;}
+
+
+.score {text-align:center; font-weight:bold; letter-spacing:.1ex;}
+.ratings form {padding:25px;}
+.rater input { width:100px; height:100px; border:3px outset gray; -moz-border-radius:20px; font-size:1em; display:inline;}
+
+.chosen { background-color:yellow; border-color:yellow !important}
+
+.user {
+  padding-bottom: 18px !important;
+}
+
+.user, .pic, .tinytext {
+  width: 150px;
+  height: 150px;  
+  padding:2.5px;
+}
+
+.tinytext {
+  background-color:#a7c7f1;
+  overflow:hidden;
+}
+.tinytext a {-moz-border-radius:15px;  
+width: 100%;
+height: 100%;
+display: block;
+text-decoration:none;
+}
+
+
+
+.user span {
+  font-size: 18px;
+  text-align:center;
+  background-color: gray;
+  color: white;
+  width: 100%;
+  margin: 0 0 -18px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  -moz-border-radius:0 0 15px 15px; }  
+.user a, .pic a {
+  -moz-border-radius:15px 15px 0 0;  
+  background: white center no-repeat;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  text-decoration:none;
+}
+.pic a {-moz-border-radius:15px;}
+
+
+.gallery li {
+  float: left;
+  position: relative; }

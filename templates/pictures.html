@@ -1,0 +1,15 @@
+{% extends 'love2create/base.html' %}
+{% load thumbnail%}
+{%block content%}
+{% if them %}
+<h1>{{them}}'s Pictures</h1>
+{% thumbnail them.safe_thumb 250x250 as thumb%}
+<div class="imgbox" style="background-image:url('{{thumb}}')"></div>
+<p class="selfdesc">{{them.text}}</p>
+<div class="clear">
+{% endif %}
+
+<div class="section pictures"><h3>Pictures</h3>
+{% include 'love2create/pictures_gallery.html'%}
+</div>
+{%endblock%}

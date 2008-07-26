@@ -1,0 +1,7 @@
+<ul class="gallery">
+{% for thing in things %}
+{#%thumbnail thing.file 150x150 crop as thumb%#}
+<li class="pic"><a href="{{thing.url}}" style="background-image:url('{{thing.thumb_url}}')"></a></li>
+{% endfor %}
+</ul>
+<div class="clear"> </div>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <title>An Interesting Experiment</title>
+  <link type="text/css" rel="stylesheet" href="/styles/reset.css">
+  <link type="text/css" rel="stylesheet" href="/styles/create.css">
+</head>
+
+<body>
+  <div id="masthead">
+    <a href="/">Home</a>
+    {%if you %}
+    | You are 
+    <a href="{{ you.url }}">{{ you }}</a> | 
+    <a href="/settings">Settings</a> |
+    <a href="{{ logout_url }}">Log Out</a> <!-- ?next=current_path ? --> 
+    {% else %}
+    <a href="{{ login_url }}">Log In With Google</a>
+    {%endif%}
+  </div>
+  {%block content%}{%endblock%}
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{%block content%}
+<h1>Welcome To Tha Site!</h1>
+
+<ul class="features section">
+  <li>Post stuff on any page, just like on a BBS</li>
+  <li>Rate things so the best stuff floats up to the top</li>
+  <li>Memes and random chatter are totally welcome</li>
+  <li>You can log in via <a href="http://openid.net">OpenID</a>, so you never need to give us your email, or even a password!</li>
+</ul>
+
+<h2>Everyone's Things</h2>
+{#% with things.pictures as pictures %#}
+{#% with things.texts as texts %#}
+{#% with things as pictures %#}
+{% include 'picturesntext.html' %}
+{#%endwith%#}
+{#%endwith%#}
+
+{% include 'addstuff.html'%}
+
+<div class="section users">
+<h3>People</h3>
+<ul class="users gallery">
+{% for profile in profiles %}
+{#%thumbnail profile.safe_thumb 180x180 crop as thumb%#}
+  <li class="user">
+    <a href="{{profile.url}}" style="background:url('{#{thumb}#}') no-repeat center #ddd">
+      <span>{{profile}}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul><div class="clear"> </div>
+</div>
+
+{%endblock%}

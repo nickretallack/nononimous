@@ -1,0 +1,19 @@
+{#% if pictures or texts %#}
+<div class="cols">
+<div class="half">
+<div class="section pictures">
+<h3>Pictures</h3>
+{% include 'pictures_gallery.html' %}
+</div>
+</div>
+
+<div class="half">
+<div class="section writing">
+<h3>Writing</h3>
+{% include 'texts_gallery.html' %}
+</div>
+</div>
+</div>
+{#%else%#}
+<h4>nothing yet</h4>
+{#%endif%#}
