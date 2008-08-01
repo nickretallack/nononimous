@@ -1,3 +1,4 @@
+# Pulled from the source of ZOPE
 import struct
 from cStringIO import StringIO
 

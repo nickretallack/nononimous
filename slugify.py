@@ -1,3 +1,4 @@
+# Modified slugging routines originally stolen from patches to django
 def slugify(value):
   """ Normalizes string, converts to lowercase, removes non-alpha characters,
   and converts spaces to hyphens.  """
