@@ -1,7 +1,8 @@
 <ul class="gallery">
-{% for thing in things %}
-{#%thumbnail thing.file 150x150 crop as thumb%#}
+{% for thing in pictures %}
+{% ifnotequal thing.key exclude.key %} {# Strip out the current item #}
 <li class="pic"><a href="{{thing.url}}" style="background-image:url('{{thing.thumb_url}}')"></a></li>
+{% endifnotequal %}
 {% endfor %}
 </ul>
 <div class="clear"> </div>

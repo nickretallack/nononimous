@@ -4,7 +4,7 @@
   <div class="half">
     <div class="section center file">
       <h3>Post a File</h3>
-      <form method='POST' enctype='multipart/form-data' action='{{thing.url}}'>
+      <form method='POST' enctype='multipart/form-data' action='{{this_page}}'>
         <input type="file" name="file" id="BrowseButton" />
         <input type="submit" value="Sabine">
       </form>
@@ -14,7 +14,7 @@
   <div class="half">
     <div class="section center write">
       <h3>Write Something</h3>
-      <form method='POST' action='.'>
+      <form method='POST' action='{{this_page}}'>
         <textarea name="text" rows="15"></textarea>
         <input type="submit" value="Sabine">
       </form>

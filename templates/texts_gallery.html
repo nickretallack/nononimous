@@ -1,5 +1,3 @@
-{% load thumbnail%}
-{% for text in texts %}
-{%thumbnail text.poster.safe_thumb 150x150 crop as thumb%}
-<a class="text" style="background-image:url('{{thumb}}')" href="{{text.url}}" >{{text.text}}</a>
+{% for thing in writing %}
+<a class="text" style="background-image:url('{{thing.poster.thumb}}')" href="{{thing.url}}" >{{thing.text}}</a>
 {% endfor %}

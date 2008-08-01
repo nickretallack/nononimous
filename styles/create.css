@@ -11,7 +11,13 @@ img {margin:0;}
 
 form { text-align:center;}
 input[type=submit] {display:block; margin:auto;}
-textarea {width:98%; margin:auto; display:block;}
+textarea {width:100%; display:block;}
+.section textarea {width:98%; margin:auto;}
+
+input,textarea{font-size:1em;}
+label {display:block; color:gray;}
+
+p{margin:1ex;text-align:left;}
 
 .imgbox { width:250px; height:250px; background:no-repeat center #ddd; float:left; margin-right:20px; }
 
@@ -69,15 +75,30 @@ h2, h3, h1 {color:white;  font-weight:bold; }
 .features {background-color:#faffb9; font-size:1.2em; padding:10px;}
 .features li {padding:3px;  margin-left:20px;}
 .score {font-size:2em; color:red;}
-.ratings {background-color:#f19484; width:500px; margin:auto;}
+.ratings {background-color:transparent; width:550px; margin:auto;}
 
 .clear { clear:both;}
 .center h3 {text-align:center;}
 
 
 .score {text-align:center; font-weight:bold; letter-spacing:.1ex;}
-.ratings form {padding:25px;}
-.rater input { width:100px; height:100px; border:3px outset gray; -moz-border-radius:20px; font-size:1em; display:inline;}
+
+.rater .ew {background-position:         0 0;}
+.rater .sucks {background-position:   -100 0;}
+.rater .shrug {background-position:   -200 0;}
+.rater .cool {background-position:    -300 0;}
+.rater .awesome {background-position: -400 0;}
+
+/*.rater .ew:hover {background-position:         0 -175;}*/
+.rater .sucks:hover, .rater .sucks.chosen {background-position:   -100 -113;}
+.rater .shrug:hover, .rater .shrug.chosen {background-position:   -200 -113;}
+.rater .cool:hover, .rater .cool.chosen {background-position:    -300 -113;}
+.rater .awesome:hover, .rater .awesome.chosen {background-position: -400 -113;}
+
+.rater input { width:100px; height:117px; font-size:0; overflow:none; border:0; display:inline; 
+  background-image:url('/images/smaller-face-buttons.png'); background-color:transparent; 
+  background-repeat:no-repeat; color:green; cursor:pointer;}
+
 
 .chosen { background-color:yellow; border-color:yellow !important}
 
@@ -131,3 +152,5 @@ text-decoration:none;
 .gallery li {
   float: left;
   position: relative; }
+
+

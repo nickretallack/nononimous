@@ -1,25 +1,15 @@
 {% extends 'base.html' %}
 {%block content%}
 <h1>{{them}}'s Page</h1>
-{#% thumbnail them.safe_thumb 250x250 as thumb%#}
-<div class="imgbox" style="background-image:url('{{thumb}}')"></div>
+<div class="imgbox" style="background-image:url('{{them.thumb_url}}&s=250')"></div>
 <p class="selfdesc">{{them.text}}</p>
 <div class="clear">
 
 <h2>{{them}}'s Stuff</h2>
-{#% with them.pictures as pictures %#}
-{#% with them.texts as texts %#}
-{#% include 'love2create/picturesntext.html' %#}
-{#%endwith%#}
-{#%endwith%#}
+{{by_gallery}}
 
 <h2>Stuff for {{them}}</h2>
-{#% with them.child_pictures as pictures %#}
-{#% with them.child_texts as texts %#}
-{#% include 'love2create/picturesntext.html' %#}
-{#%endwith%#}
-{#%endwith%#}
+{{for_gallery}}
 
 {% include 'addstuff.html'%}
-
 {%endblock%}

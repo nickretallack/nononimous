@@ -1,4 +1,6 @@
 import struct
+from cStringIO import StringIO
+
 def getImageInfo(data):
     data = str(data)
     size = len(data)

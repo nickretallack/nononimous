@@ -8,12 +8,11 @@
 
 <body>
   <div id="masthead">
-    <a href="/">Home</a>
+    <a href="/">Home</a> | 
     {%if you %}
-    | You are 
-    <a href="{{ you.url }}">{{ you }}</a> | 
+    You are <a href="{{ you.url }}">{{ you }}</a> | 
     <a href="/settings">Settings</a> |
-    <a href="{{ logout_url }}">Log Out</a> <!-- ?next=current_path ? --> 
+    <a href="{{ logout_url }}">Log Out</a>
     {% else %}
     <a href="{{ login_url }}">Log In With Google</a>
     {%endif%}

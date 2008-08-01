@@ -6,18 +6,15 @@
 
 <div class="section poster"><h3>Posted</h3>
 <div class="user">
-  {#%thumbnail thing.poster.safe_thumb 150x150 crop as thumb%#}
-  <a href="{{thing.poster.url}}" style="background-image:url('{#{thumb}#}')"><span>{{thing.poster}}</span></a>
-</div></div>
-
-
+  <a href="{{thing.poster.url}}" style="background-image:url('{{thing.poster.thumb_url}}')">
+    <span>{{thing.poster}}</span>
+</a></div></div>
 
 {% if thing.parent_thing %}
 <div class="section parent"><h3>On</h3>
   {% if thing.parent_thing.file %}
   <div class="pic">
-  {#%thumbnail thing.parent_thing.file 150x150 crop as thumb%#}
-  <a href="{{thing.parent_thing.url}}" style="background-image:url('{#{thumb}#}')"></a>
+  <a href="{{thing.parent_thing.url}}" style="background-image:url('{{thing.parent_thing.thumb_url}}')"></a>
   </div>
   {%else%}
   <div class="tinytext">
@@ -29,8 +26,8 @@
 {% if thing.parent_user %}
 <div class="section receiver"><h3>For</h3>
   <div class="user">
-  {#%thumbnail thing.parent_user.safe_thumb 150x150 crop as thumb%#}
-  <a href="{{thing.parent_user.niftyboard_url}}" style="background-image:url('{#{thumb}#}')"><span>{{thing.parent_user}}</span></a>
+    <a href="{{thing.parent_user.niftyboard_url}}" style="background-image:url('{#{thumb}#}')">
+      <span>{{thing.parent_user}}</span></a>
 </div></div>
 {%endif%}
 {%endif%}
@@ -38,24 +35,18 @@
 {% if you %}
 <div class="section ratings">
   <h3>Rate It</h3>
-<form method="post" action="{# url rate thing.pk #}" class="rater">
-{% for index,rating in rating_values %}
-<input type="submit" name="score" value="{{rating}}" {% ifequal your_rating.index index %}class="chosen"{%endifequal%}>
+<form method="post" action="{{thing.url}}/rate" class="rater">
+{% for rating in rating_values %}
+<input type="submit" name="score" value="{{rating}}" class="{{rating}} {%ifequal your_rating.string rating%}chosen{%endifequal%}">
 {%endfor%}
 </form>
-<div class="score">{{thing.cached_score}}</div>
+<div class="score">{{thing.score}}</div>
 </div>
 {% endif %}
-
 <div class="clear">
 
-
 <h2>Responses to This</h2>
-{#% with thing.child_pictures as pictures %#}
-{#% with thing.child_texts as texts %#}
-{% include 'picturesntext.html' %}
-{#%endwith%#}
-{#%endwith%#}
+{{gallery}}
 
 {% include 'addstuff.html'%}
 

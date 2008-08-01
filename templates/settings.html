@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<h2>{{you}}'s Settings</h2>
+<form method='POST' action='{{this_page}}'>
+  <p>
+  <label for="name">Display Name:</label>
+  <input type="text" value="{{you.name}}" id="name" name="name"></textarea>
+</p>
+
+<p>
+  <label for="text">Tell us about yourself:</label>
+  <textarea id="text" name="text" rows="5">{{you.text}}</textarea>
+</p>
+  <input type="submit" value="Save!">
+</form>
+
+<h2>To change your icon, set up a <a href="http://gravatar.com">Gravatar</a> for this email address: {{you.user.email}}</h2>
+
+{%endblock%}
